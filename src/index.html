@@ -83,35 +83,84 @@
       />
       <label for="dark-mode-checkbox" class="dark-mode-lebel"></label>
     </div>
-    <textarea>
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
 
-  000
+    <main class="main-container">
+      <div class="card-section">
+        <div class="card-back-container">
+          <div class="card-back">
+            <img
+              src="./images/bg-card-back.png"
+              alt="Back side of a credit card"
+            />
+            <p class="cvc-number">000</p>
+          </div>
+        </div>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+        <div class="card-front-container">
+          <div class="card-front">
+            <img
+              class="card-bg-img"
+              src="./images/bg-card-front.png"
+              alt="Front side of a credit card"
+            />
+            <img
+              class="card-logo"
+              src="./images/card-logo.svg"
+              alt="Card logo"
+            />
+            <p class="card-front__card-number">0000 0000 0000 0000</p>
+            <p class="card-front__name">Alamin</p>
+            <p class="card-front__date">00/00</p>
+          </div>
+        </div>
+      </div>
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+      <!-- Form section -->
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+      <form class="form" action="#">
+        <label for="name">Cardholder Name</label>
+        <input
+          type="text"
+          name="Name"
+          id="name"
+          placeholder="e.g. Jane Appleseed"
+        />
 
-  CVC
-  e.g. 123
+        <label for="card-number">Card Number</label>
+        <input
+          type="text"
+          name="Card number"
+          id="card-number"
+          placeholder="e.g. 1234 5678 9123 0000"
+        />
 
-  Confirm
+        <div class="date-and-cvc">
+          <div class="exp-date-wrapper">
+            <label for="exp-date">Exp. Date (MM/YY)</label>
+            <div class="exp-date-inputs">
+              <input type="text" name="Month" id="exp-date" placeholder="MM" />
+              <input type="text" name="Year" id="exp-date" placeholder="YY" />
+            </div>
+          </div>
+          <div class="cvc-wrapper">
+            <label for="cvc">CVC</label>
+            <input type="text" name="CVC" id="cvc" />
+          </div>
+        </div>
 
-  <!-- Completed state start -->
+        <div class="completed">
+          <img src="./images/icon-complete.svg" alt="Completed check icon" />
 
-  Thank you!
-  We've added your card details
-  Continue
-</textarea
-    >
+          <p class="completed__greeting">Thank you!</p>
+          <p class="completed__message">We've added your card details</p>
+          <button class="completed__btn-continue" type="button">
+            Continue
+          </button>
+        </div>
+
+        <button class="btn-submit" type="submit">Confirm</button>
+      </form>
+    </main>
 
     <footer class="footer">
       <div class="attribution-wrapper">
