@@ -1,13 +1,4 @@
 :root.dark-mode {
-  // Primary
-  --light-red: hsl(0, 72%, 55%);
-
-  // Neutral
-  --white: hsl(249, 22%, 12%);
-  --off-white: hsl(245, 12%, 22%);
-  --light-grey: hsl(0, 0%, 92%);
-  --smokey-grey: hsl(0, 0%, 86%);
-  --off-black: hsl(0, 0%, 75%);
 }
 
 .dark-mode-container {
@@ -23,7 +14,7 @@
     --clr-bg: rgb(214, 214, 214);
     --clr-border: #ffffff;
     --clr-shadow: rgba(24, 27, 48, 0.8);
-    --sh-height: 2.5rem;
+    --sh-height: 2rem;
     --border: calc(var(--sh-height) / 8);
     position: relative;
     display: block;
@@ -35,14 +26,10 @@
     box-shadow: 0 0 10px var(--clr-shadow);
     cursor: pointer;
 
-    @media screen and (max-width: $bp-medium) {
-      --sh-height: 2rem;
-    }
-
     &::before {
       content: "";
       display: inline-block;
-      background: url(../assets/images/icon-light.svg) no-repeat center / 80%;
+      background: url(../images/icon-light.svg) no-repeat center / 80%;
       --clr-circle: #4343ff;
       --circle: calc(var(--sh-height) - var(--border) * 2);
       position: absolute;
@@ -59,7 +46,7 @@
   }
 
   .dark-mode-checkbox:checked ~ .dark-mode-lebel::before {
-    background-image: url(../assets/images/icon-dark.svg);
+    background-image: url(../images/icon-dark.svg);
 
     --clr-circle: #2c2cd8;
     left: calc(100% - var(--circle));
