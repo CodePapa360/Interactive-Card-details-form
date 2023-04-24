@@ -11,12 +11,21 @@
   --very-dark-violet: hsl(278, 68%, 11%);
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   min-height: 100vh; //incase dvh is not supported
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .footer {

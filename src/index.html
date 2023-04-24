@@ -89,6 +89,7 @@
         <div class="card-back-container">
           <div class="card-back">
             <img
+              class="card-bg-back-img"
               src="./images/bg-card-back.png"
               alt="Back side of a credit card"
             />
@@ -99,7 +100,7 @@
         <div class="card-front-container">
           <div class="card-front">
             <img
-              class="card-bg-img"
+              class="card-bg-front-img"
               src="./images/bg-card-front.png"
               alt="Front side of a credit card"
             />
@@ -108,9 +109,11 @@
               src="./images/card-logo.svg"
               alt="Card logo"
             />
-            <p class="card-front__card-number">0000 0000 0000 0000</p>
-            <p class="card-front__name">Alamin</p>
-            <p class="card-front__date">00/00</p>
+            <div class="card-info">
+              <p class="card-front__card-number">0000 0000 0000 0000</p>
+              <p class="card-front__name">Jane Appleseed</p>
+              <p class="card-front__date">00/00</p>
+            </div>
           </div>
         </div>
       </div>
@@ -118,47 +121,62 @@
       <!-- Form section -->
 
       <form class="form" action="#">
-        <label for="name">Cardholder Name</label>
-        <input
-          type="text"
-          name="Name"
-          id="name"
-          placeholder="e.g. Jane Appleseed"
-        />
+        <div class="input-wrapper">
+          <label for="name">Cardholder Name</label>
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="error-message"></p>
+        </div>
 
-        <label for="card-number">Card Number</label>
-        <input
-          type="text"
-          name="Card number"
-          id="card-number"
-          placeholder="e.g. 1234 5678 9123 0000"
-        />
+        <div class="input-wrapper">
+          <label for="card-number">Card Number</label>
+          <input
+            type="text"
+            name="Card number"
+            id="card-number"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+          />
+          <p class="error-message"></p>
+        </div>
 
-        <div class="date-and-cvc">
-          <div class="exp-date-wrapper">
-            <label for="exp-date">Exp. Date (MM/YY)</label>
-            <div class="exp-date-inputs">
-              <input type="text" name="Month" id="exp-date" placeholder="MM" />
-              <input type="text" name="Year" id="exp-date" placeholder="YY" />
+        <div class="numeric-details-container">
+          <div class="exp-date-month-container">
+            <label for="exp-details">Exp. Date (MM/YY)</label>
+            <div class="exp-date-inputs-container">
+              <div class="input-wrapper">
+                <input type="number" name="Date" id="exp-details" />
+                <p class="error-message"></p>
+              </div>
+              <div class="input-wrapper">
+                <input type="number" name="Date" id="exp-details" />
+                <p class="error-message"></p>
+              </div>
             </div>
           </div>
-          <div class="cvc-wrapper">
+
+          <div class="cvc-container input-wrapper">
             <label for="cvc">CVC</label>
             <input type="text" name="CVC" id="cvc" />
+            <p class="error-message"></p>
           </div>
         </div>
 
-        <div class="completed">
+        <!-- <div class="completed">
           <img src="./images/icon-complete.svg" alt="Completed check icon" />
 
           <p class="completed__greeting">Thank you!</p>
           <p class="completed__message">We've added your card details</p>
-          <button class="completed__btn-continue" type="button">
+          <button class="completed__btn-continue button" type="button">
             Continue
           </button>
-        </div>
+        </div> -->
 
-        <button class="btn-submit" type="submit">Confirm</button>
+        <button class="btn-submit button" type="submit">Confirm</button>
       </form>
     </main>
 

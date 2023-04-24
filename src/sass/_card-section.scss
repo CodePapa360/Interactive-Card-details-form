@@ -1,0 +1,87 @@
+.card-section {
+  background-image: url(../images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 2.5rem 1rem 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+
+  .card-back-container {
+    margin-left: auto;
+
+    .card-back {
+      position: relative;
+      max-width: 16rem;
+
+      .card-bg-back-img {
+        margin-left: auto;
+      }
+
+      .cvc-number {
+        position: absolute;
+        top: 50%;
+        right: 12%;
+        transform: translateY(-50%);
+        font-size: 0.7rem;
+        color: var(--light-grayish-violet);
+      }
+    }
+  }
+
+  .card-front-container {
+    position: absolute;
+    bottom: -2rem;
+    left: 1rem;
+  }
+
+  .card-front {
+    position: relative;
+    max-width: 16rem;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+
+    .card-bg-front-img {
+      width: 100%;
+    }
+
+    .card-logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 20%;
+    }
+
+    .card-info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1rem;
+      color: var(--light-grayish-violet);
+
+      width: 100%;
+    }
+
+    &__card-number {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    &__name {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+
+    &__date {
+      display: inline-block;
+      float: right;
+      font-size: 0.7rem;
+    }
+  }
+}

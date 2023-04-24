@@ -1,0 +1,75 @@
+.form {
+  padding: 1.5rem;
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    letter-spacing: 2px;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+
+  input {
+    border: 1px solid var(--light-grayish-violet);
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+    transition: border-color 0.2s ease;
+    color: var(--very-dark-violet);
+
+    &:focus {
+      border-color: var(--violet);
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  .error-message {
+    font-size: 0.7rem;
+    color: var(--red);
+  }
+
+  .numeric-details-container {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .exp-date-inputs-container {
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  .button {
+    width: 100%;
+    background-color: var(--very-dark-violet);
+    color: var(--light-grayish-violet);
+    padding: 0.7rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:active {
+      background-color: var(--dark-grayish-violet);
+    }
+
+    &:hover {
+      background-color: var(--violet);
+    }
+  }
+}
