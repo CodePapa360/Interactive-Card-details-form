@@ -2,6 +2,11 @@
 }
 
 .dark-mode-container {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1;
+
   display: block;
   margin-left: auto;
   margin-bottom: 1rem;
@@ -14,7 +19,7 @@
     --clr-bg: rgb(214, 214, 214);
     --clr-border: #ffffff;
     --clr-shadow: rgba(24, 27, 48, 0.8);
-    --sh-height: 2rem;
+    --sh-height: 1.5rem;
     --border: calc(var(--sh-height) / 8);
     position: relative;
     display: block;

@@ -77,6 +77,7 @@
   <body>
     <div class="dark-mode-container">
       <input
+        autocomplete="off"
         type="checkbox"
         class="dark-mode-checkbox"
         id="dark-mode-checkbox"
@@ -86,33 +87,37 @@
 
     <main class="main-container">
       <div class="card-section">
-        <div class="card-back-container">
-          <div class="card-back">
-            <img
-              class="card-bg-back-img"
-              src="./images/bg-card-back.png"
-              alt="Back side of a credit card"
-            />
-            <p class="cvc-number">000</p>
+        <div class="card-top-container">
+          <div class="card-back-container">
+            <div class="card-back">
+              <img
+                class="card-bg-back-img"
+                src="./images/bg-card-back.png"
+                alt="Back side of a credit card"
+              />
+              <p class="cvc-number">000</p>
+            </div>
           </div>
-        </div>
 
-        <div class="card-front-container">
-          <div class="card-front">
-            <img
-              class="card-bg-front-img"
-              src="./images/bg-card-front.png"
-              alt="Front side of a credit card"
-            />
-            <img
-              class="card-logo"
-              src="./images/card-logo.svg"
-              alt="Card logo"
-            />
-            <div class="card-info">
-              <p class="card-front__card-number">0000 0000 0000 0000</p>
-              <p class="card-front__name">Jane Appleseed</p>
-              <p class="card-front__date">00/00</p>
+          <div class="card-front-container">
+            <div class="card-front">
+              <img
+                class="card-bg-front-img"
+                src="./images/bg-card-front.png"
+                alt="Front side of a credit card"
+              />
+              <img
+                class="card-logo"
+                src="./images/card-logo.svg"
+                alt="Card logo"
+              />
+              <div class="card-info">
+                <p class="card-info__card-number">0000 0000 0000 0000</p>
+                <div class="bottom-info">
+                  <p class="bottom-info__name">Jane Appleseed</p>
+                  <p class="bottom-info__date">00/00</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -124,6 +129,7 @@
         <div class="input-wrapper">
           <label for="name">Cardholder Name</label>
           <input
+            autocomplete="off"
             type="text"
             name="Name"
             id="name"
@@ -135,6 +141,7 @@
         <div class="input-wrapper">
           <label for="card-number">Card Number</label>
           <input
+            autocomplete="off"
             type="text"
             name="Card number"
             id="card-number"
@@ -149,11 +156,21 @@
             <label for="exp-details">Exp. Date (MM/YY)</label>
             <div class="exp-date-inputs-container">
               <div class="input-wrapper">
-                <input type="number" name="Date" id="exp-details" />
+                <input
+                  autocomplete="off"
+                  type="number"
+                  name="Date"
+                  id="exp-details"
+                />
                 <p class="error-message"></p>
               </div>
               <div class="input-wrapper">
-                <input type="number" name="Date" id="exp-details" />
+                <input
+                  autocomplete="off"
+                  type="number"
+                  name="Date"
+                  id="exp-details"
+                />
                 <p class="error-message"></p>
               </div>
             </div>
@@ -161,7 +178,7 @@
 
           <div class="cvc-container input-wrapper">
             <label for="cvc">CVC</label>
-            <input type="text" name="CVC" id="cvc" />
+            <input autocomplete="off" type="number" name="CVC" id="cvc" />
             <p class="error-message"></p>
           </div>
         </div>

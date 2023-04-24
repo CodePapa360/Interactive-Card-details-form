@@ -1,6 +1,9 @@
 .form {
   padding: 1.5rem;
 
+  max-width: 25rem;
+  margin: auto;
+
   .input-wrapper {
     display: flex;
     flex-direction: column;

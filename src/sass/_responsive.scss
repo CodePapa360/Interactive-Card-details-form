@@ -1,0 +1,10 @@
+@media screen and (max-width: $bp-small) {
+  .card-section {
+    --card-max-width: 12rem;
+    padding: 2rem 1rem 2.5rem;
+  }
+
+  html {
+    font-size: 95%;
+  }
+}
