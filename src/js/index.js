@@ -7,10 +7,13 @@ const root = document.documentElement;
 
 //////////////////////////////////
 //dark mode feature
-const darkMode = () =>
-  darkModeToggle.checked
-    ? root.classList.add("dark-mode")
-    : root.classList.remove("dark-mode");
+const darkMode = function () {
+  if (darkModeToggle.checked) {
+    root.classList.add("dark-mode");
+  } else {
+    root.classList.remove("dark-mode");
+  }
+};
 
 darkModeToggle.addEventListener("change", darkMode);
 window.addEventListener("load", darkMode);
