@@ -9,6 +9,12 @@
   --light-grayish-violet: hsl(270, 3%, 87%);
   --dark-grayish-violet: hsl(279, 6%, 55%);
   --very-dark-violet: hsl(278, 68%, 11%);
+
+  //added
+  --static-light-grayish-violet: hsl(270, 3%, 87%);
+  --mod-very-dark-violet: hsl(278, 68%, 11%);
+  --mod-violet: hsl(278, 94%, 30%);
+  --black: black;
 }
 
 $bp-largest: 1400px;
@@ -31,6 +37,7 @@ body {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
+  background-color: var(--white);
 }
 
 .main-container {

@@ -22,7 +22,7 @@
 
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/CodePapa360/Interactive-Card-details-form/main/screenshots/Interactive-card-details-form-screenshot-compared.png"
+      content="https://raw.githubusercontent.com/CodePapa360/Interactive-Card-details-form/main/screenshots/interactive-card-details-form-screenshot-compared-codepapa360.png"
     />
 
     <meta
@@ -56,7 +56,7 @@
 
     <meta
       name="twitter:image"
-      content="https://raw.githubusercontent.com/CodePapa360/Interactive-Card-details-form/main/screenshots/Interactive-card-details-form-screenshot-compared.png"
+      content="https://raw.githubusercontent.com/CodePapa360/Interactive-Card-details-form/main/screenshots/interactive-card-details-form-screenshot-compared-codepapa360.png"
     />
 
     <meta
@@ -151,6 +151,7 @@
                   type="number"
                   name="Date"
                   id="exp-details"
+                  placeholder="MM"
                 />
                 <p class="error-message"></p>
               </div>
@@ -160,6 +161,7 @@
                   type="number"
                   name="Date"
                   id="exp-details"
+                  placeholder="YY"
                 />
                 <p class="error-message"></p>
               </div>
@@ -168,10 +170,18 @@
 
           <div class="cvc-container input-wrapper">
             <label for="cvc">CVC</label>
-            <input autocomplete="off" type="number" name="CVC" id="cvc" />
+            <input
+              autocomplete="off"
+              type="number"
+              name="CVC"
+              id="cvc"
+              placeholder="e.g. 123"
+            />
             <p class="error-message"></p>
           </div>
         </div>
+
+        <button class="btn-submit button" type="submit">Confirm</button>
 
         <!-- <div class="completed">
           <img src="./images/icon-complete.svg" alt="Completed check icon" />
@@ -182,8 +192,6 @@
             Continue
           </button>
         </div> -->
-
-        <button class="btn-submit button" type="submit">Confirm</button>
       </form>
     </main>
 

@@ -18,7 +18,7 @@
 
 <a align="center" href="https://interactive-card-details-form-alamin.netlify.app/">
 
-<img src="./screenshots/interactive-card-details-form-screenshot-compared.png"/>
+<img src="./screenshots/interactive-card-details-form-screenshot-compared-codepapa360.png"/>
 </a>
 
 ## The challenge

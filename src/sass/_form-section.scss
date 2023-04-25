@@ -1,8 +1,13 @@
 .form {
   padding: 1.5rem;
-
   max-width: 25rem;
   margin: 4rem auto 0;
+  width: 100%;
+
+  @media screen and (min-width: $bp-large) {
+    max-width: 30rem;
+    margin-top: 0;
+  }
 
   .input-wrapper {
     display: flex;
@@ -27,6 +32,7 @@
     width: 100%;
     transition: border-color 0.2s ease;
     color: var(--very-dark-violet);
+    background-color: var(--white);
 
     &:focus {
       border-color: var(--violet);
@@ -59,8 +65,8 @@
 
   .button {
     width: 100%;
-    background-color: var(--very-dark-violet);
-    color: var(--light-grayish-violet);
+    background-color: var(--mod-very-dark-violet);
+    color: var(--static-light-grayish-violet);
     padding: 0.7rem;
     border: none;
     border-radius: 10px;
@@ -68,11 +74,36 @@
     transition: background 0.2s ease;
 
     &:active {
-      background-color: var(--dark-grayish-violet);
+      background-color: var(--mod-dark-grayish-violet);
     }
 
     &:hover {
-      background-color: var(--violet);
+      background-color: var(--mod-violet);
     }
+  }
+}
+
+///////////////////////////
+/// Completed section view
+.completed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    margin-bottom: 1.5rem;
+  }
+
+  &__greeting {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+  }
+
+  &__message {
+    color: var(--dark-grayish-violet);
+    margin-bottom: 1.5rem;
   }
 }

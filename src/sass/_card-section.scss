@@ -3,19 +3,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  color: var(--light-grayish-violet);
+  color: var(--static-light-grayish-violet);
+  position: relative;
   --card-max-width: 15rem;
 
   @media screen and (min-width: $bp-medium) {
     --card-max-width: 17rem;
+    font-size: 110%;
   }
 
   @media screen and (min-width: $bp-large) {
     --card-max-width: 25rem;
     height: 100vh;
+    font-size: 130%;
   }
 
-  position: relative;
+  @media screen and (min-width: $bp-large-x) {
+    font-size: 150%;
+  }
 
   /////////////
   /// back card
@@ -88,20 +93,7 @@
       left: 0;
       bottom: 0;
       padding: 1em;
-      color: var(--light-grayish-violet);
       width: 100%;
-
-      @media screen and (min-width: $bp-medium) {
-        font-size: 110%;
-      }
-
-      @media screen and (min-width: $bp-large) {
-        font-size: 130%;
-      }
-
-      @media screen and (min-width: $bp-large-x) {
-        font-size: 150%;
-      }
 
       &__card-number {
         font-size: 1.1em;
