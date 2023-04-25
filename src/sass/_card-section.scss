@@ -3,86 +3,123 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem 1rem 3rem;
-  margin-bottom: 3rem;
-  position: relative;
+  color: var(--light-grayish-violet);
   --card-max-width: 15rem;
 
-  .card-top-container {
-    position: relative;
+  @media screen and (min-width: $bp-medium) {
+    --card-max-width: 17rem;
+  }
+
+  @media screen and (min-width: $bp-large) {
+    --card-max-width: 25rem;
+    height: 100vh;
+  }
+
+  position: relative;
+
+  /////////////
+  /// back card
+  .card-back {
     max-width: var(--card-max-width);
+    width: 100%;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 
-    .card-back-container {
-      .card-back {
-        position: relative;
-        transform: translateX(1.5rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
 
-        .cvc-number {
-          position: absolute;
-          top: 50%;
-          right: 12%;
-          transform: translateY(-50%);
-          font-size: 0.7rem;
-          color: var(--light-grayish-violet);
-        }
-      }
+    @media screen and (min-width: $bp-large) {
+      transform: translate(-30%, 20%);
     }
 
-    .card-front-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      max-width: var(--card-max-width);
+    @media screen and (min-width: $bp-largest) {
+      transform: translate(0%, 20%);
     }
 
-    .card-front {
-      position: relative;
+    .card-bg-back-img {
       width: 100%;
-      transform: translateY(calc(var(--card-max-width) / 3.25))
-        translateX(-1.5rem);
-      box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+    }
 
-      .card-bg-front-img {
-        width: 100%;
+    .cvc-number {
+      position: absolute;
+      top: 50%;
+      right: 12%;
+      transform: translateY(-50%);
+      font-size: 0.7em;
+    }
+  }
+
+  ///////////////
+  /// Front card
+  .card-front {
+    max-width: var(--card-max-width);
+    width: 100%;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, 7%);
+
+    @media screen and (min-width: $bp-large) {
+      transform: translate(-40%, -100%);
+    }
+
+    @media screen and (min-width: $bp-largest) {
+      transform: translate(-20%, -100%);
+    }
+
+    .card-bg-front-img {
+      width: 100%;
+    }
+
+    .card-logo {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 20%;
+    }
+
+    .card-info {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding: 1em;
+      color: var(--light-grayish-violet);
+      width: 100%;
+
+      @media screen and (min-width: $bp-medium) {
+        font-size: 110%;
       }
 
-      .card-logo {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        width: 20%;
+      @media screen and (min-width: $bp-large) {
+        font-size: 130%;
       }
 
-      .card-info {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        padding: 1rem;
-        color: var(--light-grayish-violet);
-        width: 100%;
+      @media screen and (min-width: $bp-large-x) {
+        font-size: 150%;
+      }
 
-        &__card-number {
-          font-size: 0.8em;
-          text-align: center;
-          margin-bottom: 0.5rem;
+      &__card-number {
+        font-size: 1.1em;
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .bottom-info {
+        display: flex;
+        justify-content: space-between;
+
+        &__name {
+          font-size: 0.6em;
+          text-transform: uppercase;
         }
 
-        .bottom-info {
-          display: flex;
-          justify-content: space-between;
-
-          &__name {
-            font-size: 0.5rem;
-            text-transform: uppercase;
-          }
-
-          &__date {
-            font-size: 0.5rem;
-          }
+        &__date {
+          font-size: 0.6em;
         }
       }
     }
