@@ -1,8 +1,13 @@
+.attribution-wrapper {
+  background-color: var(--blue);
+  color: white;
+  padding: 16px 0;
+}
+
 .attribution {
-  --clr-attb-primary: var(--blue);
-  --clr-attb-secondary: var(--violet);
-  --fs-attb: 13px;
-  color: var(--black);
+  --clr-attb-primary: yellow;
+  --clr-attb-secondary: rgb(192, 192, 0);
+  --fs-attb: calc(1rem - 2px);
   text-align: center;
   line-height: 2;
   font-size: var(--fs-attb);
@@ -10,12 +15,10 @@
   border-left: 2px solid var(--clr-attb-primary);
   border-right: 2px solid var(--clr-attb-primary);
   border-radius: 10px;
-  margin: 16px auto;
+  margin: auto;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  ////
-  // margin-top: 2rem;
 
   .attb-link {
     color: var(--clr-attb-primary);
@@ -34,6 +37,6 @@
   }
 
   .attb-fem {
-    font-size: calc(var(--fs-attb) - 2px);
+    font-size: calc(var(--fs-attb) / 1.1);
   }
 }
