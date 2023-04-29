@@ -3,6 +3,8 @@
   max-width: 25rem;
   margin: 4rem auto 0;
   width: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 
   @media screen and (min-width: $bp-large) {
     max-width: 30rem;
@@ -36,6 +38,7 @@
 
     &:focus {
       border-color: var(--violet);
+      box-shadow: 0 0 10px var(--shadow-dark-violet);
     }
 
     &::-webkit-outer-spin-button,
@@ -81,29 +84,30 @@
       background-color: var(--mod-violet);
     }
   }
-}
 
-///////////////////////////
-/// Completed section view
-.completed {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  ///////////////////////////
+  /// Completed section view
 
-  img {
-    margin-bottom: 1.5rem;
-  }
+  .completed {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  &__greeting {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    color: var(--very-dark-violet);
-  }
+    img {
+      margin-bottom: 1.5rem;
+    }
 
-  &__message {
-    color: var(--dark-grayish-violet);
-    margin-bottom: 1.5rem;
+    &__greeting {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: var(--very-dark-violet);
+    }
+
+    &__message {
+      color: var(--dark-grayish-violet);
+      margin-bottom: 1.5rem;
+    }
   }
 }

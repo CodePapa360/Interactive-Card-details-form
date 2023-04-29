@@ -11,6 +11,7 @@
   --very-dark-violet: hsl(278, 68%, 11%);
 
   //added
+  --shadow-dark-violet: hsla(278, 68%, 11%, 0.4);
   --static-light-grayish-violet: hsl(270, 3%, 87%);
   --mod-very-dark-violet: hsl(278, 68%, 11%);
   --mod-violet: hsl(278, 94%, 30%);
@@ -23,6 +24,11 @@ $bp-large: 1000px;
 $bp-medium: 650px;
 $bp-small: 340px;
 
+::selection {
+  background-color: var(--violet);
+  color: var(--white);
+}
+
 html {
   font-size: 18px;
 
@@ -33,8 +39,7 @@ html {
 
 body {
   font-family: "Space Grotesk", sans-serif;
-  min-height: 100vh; //incase dvh is not supported
-  min-height: 100dvh;
+
   display: flex;
   flex-direction: column;
   background-color: var(--white);
@@ -44,6 +49,11 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 4fr;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh; //incase dvh is not supported
+  min-height: 100dvh;
 
   @media screen and (min-width: $bp-large) {
     grid-template-columns: 2fr 4fr;

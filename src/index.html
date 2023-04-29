@@ -96,7 +96,7 @@
             src="./images/bg-card-back.png"
             alt="Back side of a credit card"
           />
-          <p class="cvc-number">000</p>
+          <p id="cvc-number" class="cvc-number">000</p>
         </div>
 
         <div class="card-front">
@@ -159,10 +159,11 @@
                 <input
                   class="exp-month"
                   autocomplete="off"
-                  type="number"
+                  type="text"
                   name="Date"
                   id="exp-details"
                   placeholder="MM"
+                  maxlength="2"
                 />
                 <p class="error-message"></p>
               </div>
@@ -170,10 +171,11 @@
                 <input
                   class="exp-year"
                   autocomplete="off"
-                  type="number"
+                  type="text"
                   name="Date"
                   id="exp-details"
                   placeholder="YY"
+                  maxlength="2"
                 />
                 <p class="error-message"></p>
               </div>
@@ -184,26 +186,17 @@
             <label for="cvc">CVC</label>
             <input
               autocomplete="off"
-              type="number"
+              type="text"
               name="CVC"
               id="cvc"
               placeholder="e.g. 123"
+              maxlength="3"
             />
             <p class="error-message"></p>
           </div>
         </div>
 
         <button class="btn-submit button" type="submit">Confirm</button>
-
-        <!-- <div class="completed">
-          <img src="./images/icon-complete.svg" alt="Completed check icon" />
-
-          <p class="completed__greeting">Thank you!</p>
-          <p class="completed__message">We've added your card details</p>
-          <button class="completed__btn-continue button" type="button">
-            Continue
-          </button>
-        </div> -->
       </form>
     </main>
 

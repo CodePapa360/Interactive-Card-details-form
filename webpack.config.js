@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    assetModuleFilename: "images/[name].[hash][ext][query]",
   },
   mode: "development",
   devServer: {
@@ -23,6 +24,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: "html-loader",
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
       },
     ],
   },
