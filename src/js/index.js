@@ -243,9 +243,33 @@ const renderThankYou = function () {
 //////////////////////////
 // Form submission
 //////////////////////////
+
+// Submit to Netlify
+const handleSubmit = (event) => {
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => {
+      [
+        inputName,
+        inputCardNumber,
+        inputExpMonth,
+        inputExpYear,
+        inputCvc,
+      ].forEach((inp) => (inp.value = ""));
+      renderThankYou();
+    })
+    .catch((error) => alert(error));
+};
+
+////////////////////
 form.addEventListener("submit", function (event) {
   event.preventDefault();
-
   if (
     validateName(inputName) &&
     validateCardNumber(inputCardNumber) &&
@@ -253,10 +277,6 @@ form.addEventListener("submit", function (event) {
     validateYear(inputExpYear) &&
     validateCvc(inputCvc)
   ) {
-    [inputName, inputCardNumber, inputExpMonth, inputExpYear, inputCvc].forEach(
-      (inp) => (inp.value = "")
-    );
-
-    renderThankYou();
+    handleSubmit(event);
   }
 });
