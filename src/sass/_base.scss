@@ -52,8 +52,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
-  min-height: 100vh; //incase dvh is not supported
-  min-height: 100dvh;
+  min-height: 100vh;
 
   @media screen and (min-width: $bp-large) {
     grid-template-columns: 2fr 4fr;
