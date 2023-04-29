@@ -44,6 +44,12 @@ Users should be able to:
 
 ## What I learned
 
+In this project, I utilized my skills in JavaScript and DOM manipulation to build a responsive and intuitive credit card form. I used Webpack to bundle my assets and optimized the build process using plugins like MiniCssExtractPlugin and HtmlWebpackPlugin.
+
+To improve the user experience, I implemented custom error messages and a "complete" screen that appears after the form is successfully submitted. I created real-time validation and feedback for the user by applying my knowledge of JavaScript. I also included a dark mode toggle and utilized localStorage to store the user's preferred theme.
+
+Overall, this project provided me with valuable experience in building interactive web applications and utilizing various front-end technologies to improve the user experience.
+
 ## Installation
 
 - Clone this repo:
