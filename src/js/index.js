@@ -253,6 +253,10 @@ form.addEventListener("submit", function (event) {
     validateYear(inputExpYear) &&
     validateCvc(inputCvc)
   ) {
+    [inputName, inputCardNumber, inputExpMonth, inputExpYear, inputCvc].forEach(
+      (inp) => (inp.value = "")
+    );
+
     renderThankYou();
   }
 });
