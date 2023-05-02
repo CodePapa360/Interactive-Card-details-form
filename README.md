@@ -2,7 +2,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://interactive-card-details-form-codepapa360.netlify.app/">
+    <a href="https://interactive-card-details-codepapa360.netlify.app/">
       🚀 Live Site
     </a>
     |
@@ -16,7 +16,7 @@
   This project is a responsive and interactive card details form developed as a practice project from Frontend Mentor. It allows users to input their card details and see real-time updates on the card image, with error message handling and interactive states for optimal user experience.
 </p>
 
-<a align="center" href="https://interactive-card-details-form-codepapa360.netlify.app/">
+<a align="center" href="https://interactive-card-details-codepapa360.netlify.app/">
 
 <img src="./screenshots/interactive-card-details-form-screenshot-compared-codepapa360.png"/>
 </a>
